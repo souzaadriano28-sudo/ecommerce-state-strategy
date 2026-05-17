@@ -13,74 +13,9 @@ Este projeto é uma API RESTful desenvolvida em **Java com Spring Boot**, constr
 
 ## 🏗 Diagrama de Classes
 
-A arquitetura do sistema foi desenhada para isolar a lógica de negócios e as regras de transição. 
+A arquitetura do sistema foi desenhada para isolar a lógica de negócios e as regras de transição.
 
-*(Nota: Você pode visualizar a imagem do diagrama copiando o código PlantUML abaixo e colando no site [PlantText](https://www.planttext.com/)).*
-
-```text
-@startuml
-package "Camada de Domínio" {
-    class Pedido {
-        - Long id
-        - Double valorPedido
-        - Double valorFrete
-        - State estadoAtual
-        + void pagar()
-        + void cancelar()
-        + void enviar()
-        + void setEstadoAtual(State estado)
-        + void setValorFrete(Double frete)
-    }
-
-    interface State {
-        + void pagar(Pedido pedido)
-        + void cancelar(Pedido pedido)
-        + void enviar(Pedido pedido)
-    }
-
-    class AguardandoPagamentoState implements State {
-        + void pagar(Pedido pedido)
-        + void cancelar(Pedido pedido)
-        + void enviar(Pedido pedido)
-    }
-
-    class PagoState implements State {
-        + void pagar(Pedido pedido)
-        + void cancelar(Pedido pedido)
-        + void enviar(Pedido pedido)
-    }
-
-    class EnviadoState implements State {
-        + void pagar(Pedido pedido)
-        + void cancelar(Pedido pedido)
-        + void enviar(Pedido pedido)
-    }
-
-    class CanceladoState implements State {
-        + void pagar(Pedido pedido)
-        + void cancelar(Pedido pedido)
-        + void enviar(Pedido pedido)
-    }
-}
-
-package "Camada de Logística (Strategy)" {
-    interface FreteStrategy {
-        + Double calcular(Double valorPedido)
-    }
-
-    class FreteTerrestre implements FreteStrategy {
-        + Double calcular(Double valorPedido)
-    }
-
-    class FreteAereo implements FreteStrategy {
-        + Double calcular(Double valorPedido)
-    }
-}
-
-Pedido "1" *-- "1" State : possui
-Pedido "1" o-- "1" FreteStrategy : utiliza
-@enduml
-```
+![Diagrama de Classes](diagrama de classes ecommerce-state-strategy.png)
 
 ---
 
