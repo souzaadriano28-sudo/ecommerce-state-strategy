@@ -15,7 +15,7 @@ Este projeto é uma API RESTful desenvolvida em **Java com Spring Boot**, constr
 
 A arquitetura do sistema foi desenhada para isolar a lógica de negócios e as regras de transição.
 
-![Diagrama de Classes](diagrama de classes ecommerce-state-strategy.png)
+![Diagrama de Classes](diagramadeclasses.png)
 
 ---
 
