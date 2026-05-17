@@ -1,13 +1,13 @@
 # Sistema de Gerenciamento de Pedidos (E-commerce)
 
-Este projeto é uma API RESTful desenvolvida em **Java com Spring Boot**, construída para gerenciar o ciclo de vida de pedidos de um e-commerce. O sistema foca fortemente na aplicação de **Padrões de Projeto (Design Patterns)** para resolver problemas complexos de transição de status e cálculo dinâmico de fretes.
+Este projeto é uma API RESTful desenvolvida em **Java com Spring Boot**, construída para gerenciar o ciclo de vida de pedidos de um e-commerce. O sistema foca fortemente na aplicação de **Padrões de Projeto (Design Patterns)** para resolver problemas complexos de transição de status e cálculos dinâmicos de fretes.
 
 ## 🛠 Tecnologias Utilizadas
 * **Java 17**
 * **Spring Boot 3** (Web, Data JPA)
 * **H2 Database** (Banco de dados em memória)
 * **Swagger / OpenAPI** (Documentação e teste de endpoints)
-* **Padrões de Projeto:** State e Strategy
+* **Padrões de Projeto:** State e Strategy 
 
 ---
 
